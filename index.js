@@ -15,7 +15,7 @@ function validate(req) {
   if (user_id == undefined || scope == undefined) {
     return status;
   } else {
-    if (user_id != "ifabula" && scope != "user") {
+    if (user_id != "ifabula" || scope != "user") {
       status.code = 401;
       status.message = "UNAUTHORIZED";
       return status;
